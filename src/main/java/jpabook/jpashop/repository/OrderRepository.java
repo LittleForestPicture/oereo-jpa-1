@@ -1,11 +1,7 @@
 package jpabook.jpashop.repository;
 
-import com.querydsl.core.types.dsl.BooleanExpression;
-import com.querydsl.jpa.impl.JPAQueryFactory;
 import jpabook.jpashop.domain.Order;
-import jpabook.jpashop.domain.OrderStatus;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.StringUtils;
 
@@ -107,6 +103,8 @@ public class OrderRepository  {
                         " join fetch o.delivery d", Order.class
         ).getResultList();
     }
+
+
 
 //    public List<Order> findAll(OrderSearch orderSearch) {
 ////        JPAQueryFactory query = new JPAQueryFactory(em);
